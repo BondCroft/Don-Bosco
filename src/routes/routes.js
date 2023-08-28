@@ -4,6 +4,10 @@ import { enviarMail, validarMail } from "../middlewares/authMail.js";
 
 export const router = express.Router();
 
+router.get("/miapi", (req, res)=>{
+    res.status(200).send({mensaje:'bienvenido a mi api!'})
+})
+
 
 router.post('/enviarmail', enviarMail, (req, res)=>{
     console.log('mail enviado con exito!');
