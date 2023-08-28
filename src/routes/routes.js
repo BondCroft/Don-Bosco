@@ -6,6 +6,7 @@ export const router = express.Router();
 
 
 router.post('/enviarmail', enviarMail, (req, res)=>{
+    console.log('mail enviado con exito!');
     res.status(200).send({mensaje:'te envie un mail'})
 });
 
